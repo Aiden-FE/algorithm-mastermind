@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "declaration": false,
+    "types": [
+      "@types/node",
+      "@types/jest"
+    ]
+  },
+  "include": [
+    "./**/*.js",
+    "./**/*.cjs",
+    "./**/*.spec.ts"
+  ]
+}
