@@ -16,5 +16,8 @@ module.exports = {
     // typescript使用此配置
     '@compass-aiden/eslint-config/ts',
     'plugin:prettier/recommended'
-  ]
+  ],
+  rules: {
+    'no-plusplus': 'off'
+  }
 }
