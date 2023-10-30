@@ -8,6 +8,8 @@ describe('旋转矩阵', () => {
       [7, 8, 9],
     ];
     rotateMatrix(data);
+    // eslint-disable-next-line no-console
+    console.log('data: ', data);
     expect(data).toMatchObject([
       [7, 4, 1],
       [8, 5, 2],

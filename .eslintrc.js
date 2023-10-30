@@ -18,6 +18,7 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   rules: {
-    'no-plusplus': 'off'
+    'no-plusplus': 'off',
+    'no-param-reassign': 'off'
   }
 }
