@@ -23,9 +23,4 @@
 
 #### 旋转矩阵
 
-对一个二维矩阵进行旋转操作，通常是按照顺时针或逆时针方向将矩阵中的元素进行重新排列
-
-代码路径: `src/array/rotate-matrix/rotate-matrix.ts`
-
-##### 业务场景
-
+[《旋转矩阵》](https://www.yuque.com/aiden-0wweb/ahvz3x/wp0dr3wg5davyl06?singleDoc#)
