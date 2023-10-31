@@ -9,20 +9,28 @@
  * @inheritDoc https://leetcode.cn/leetbook/read/array-and-string/clpgd/
  */
 export default function rotateMatrix(matrix: number[][]) {
-  // 限定 时间复杂度 O(n^2) 空间负责度 O(1)
-  // let temp: number | undefined;
-  // matrix.forEach((row, rowIndex) => {
-  //   row.forEach((col, colIndex) => {
-  //     temp = matrix[colIndex][rowIndex];
-  //     matrix[colIndex][rowIndex] = col;
-  //     matrix[rowIndex][colIndex] = temp;
-  //     temp = undefined;
-  //   });
-  // });
+  // 行转列
+  matrix.forEach((row, rowIndex) => {
+    // 每遍历一行,则意味着有一列已经处理过了
+    for (let colIndex = rowIndex; colIndex < row.length; colIndex++) {
+      // 原地交换位置
+      [matrix[colIndex][rowIndex], matrix[rowIndex][colIndex]] = [
+        matrix[rowIndex][colIndex],
+        matrix[colIndex][rowIndex],
+      ];
+    }
+  });
+  // 行翻转
+  matrix.forEach((row) => {
+    for (let i = 0; i < row.length / 2; i++) {
+      // 前后原地换位
+      [row[i], row[row.length - 1 - i]] = [row[row.length - 1 - i], row[i]];
+    }
+  });
   return matrix;
 }
 
-// 使用了额外空间 通过规律定式实现 时间复杂度 O(n^2) 空间负责度 O(n^2)
+// 使用了额外空间 通过规律定式实现 时间复杂度 O(n^2) 空间复杂度 O(n^2)
 // export default function rotateMatrix(matrix: number[][]) {
 //   // 规律: 当前位置: matrix[row][col] 旋转后 matrix[col][currentRow.length - rowIndex - 1] n-1是因为右开区间
 //   const result = matrix.reduce((previousValue, currentRow, rowIndex) => {

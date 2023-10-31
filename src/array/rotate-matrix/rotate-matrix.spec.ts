@@ -1,15 +1,13 @@
 import rotateMatrix from './rotate-matrix';
 
 describe('旋转矩阵', () => {
-  it('将矩阵顺时针旋转90度', () => {
+  it('3*3矩阵旋转90度', () => {
     const data = [
       [1, 2, 3],
       [4, 5, 6],
       [7, 8, 9],
     ];
     rotateMatrix(data);
-    // eslint-disable-next-line no-console
-    console.log('data: ', data);
     expect(data).toMatchObject([
       [7, 4, 1],
       [8, 5, 2],
@@ -17,7 +15,7 @@ describe('旋转矩阵', () => {
     ]);
   });
 
-  it('将矩阵顺时针旋转90度', () => {
+  it('4*4矩阵旋转90度', () => {
     const data = [
       [5, 1, 9, 11],
       [2, 4, 8, 10],
