@@ -7,4 +7,7 @@ describe('最长公共前缀', () => {
   it('不存在公共前缀', () => {
     expect(longestCommonPrefix(['dog', 'racecar', 'car'])).toEqual('');
   });
+  it('前长后短用例', () => {
+    expect(longestCommonPrefix(['ab', 'a'])).toEqual('a');
+  });
 });
