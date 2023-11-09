@@ -17,3 +17,5 @@
 * [《对角线遍历》](https://www.yuque.com/aiden-0wweb/ahvz3x/gpduikvy1x0ov5mc?singleDoc#)
 
 ### 字符串
+
+* [《最长公共前缀》](https://www.yuque.com/aiden-0wweb/ahvz3x/nnsqamdgcyg1g645?singleDoc#)
